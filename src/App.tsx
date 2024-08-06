@@ -13,7 +13,7 @@ function App() {
         <AppButton status={active}>
           <button onClick={handleActive}>Mainnet</button>
         </AppButton>
-        <AppButton status={!active} onClick={handleActive}>
+        <AppButton status={!active}>
           <button onClick={handleActive}>Testnet</button>
         </AppButton>
       </div>
