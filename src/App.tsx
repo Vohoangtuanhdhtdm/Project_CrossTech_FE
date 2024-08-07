@@ -1,21 +1,12 @@
-import { useState } from "react";
-import "./App.css";
-import { AppButton } from "./component/button";
+import { Menu } from "./component/Header/Menu";
 
 function App() {
-  const [active, setActive] = useState<boolean>(false);
-  const handleActive = () => {
-    setActive(!active);
-  };
   return (
     <>
-      <div className="w-[150px] h-[34px] bg-[#EEC5C7] flex items-center rounded-2xl">
-        <AppButton status={active}>
-          <button onClick={handleActive}>Mainnet</button>
-        </AppButton>
-        <AppButton status={!active}>
-          <button onClick={handleActive}>Testnet</button>
-        </AppButton>
+      <div className="flex items-center justify-evenly">
+        <div className="mr-[300px]">IMG</div>
+        <Menu />
+        <div className="ml-[300px]">AppButton</div>
       </div>
     </>
   );
