@@ -1,15 +1,11 @@
-import { Spin } from "antd";
-
 interface PropsButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
-  loading?: boolean;
   status?: boolean;
   type?: "button" | "submit" | "reset";
 }
 
 export const AppButton = ({
   className,
-  loading,
   status,
   children,
   type = "button",
@@ -22,7 +18,7 @@ export const AppButton = ({
         } w-[76px] h-[30px] rounded-2xl`}
         type={type}
       >
-        {children} {loading && <Spin />}
+        {children}
       </button>
     </div>
   );
