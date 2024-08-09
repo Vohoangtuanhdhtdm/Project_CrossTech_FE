@@ -9,11 +9,16 @@ import imageIcon1 from "./assets/Vector (1).svg";
 import imageIcon2 from "./assets/Vector (2).svg";
 import imgaeHeart from "./assets/Heart.svg";
 import imageIconHand from "./assets/HandBeer.svg";
+import { LayoutHeader } from "./layout/LayoutHeader/LayoutHeader";
+import { LayoutConnect } from "./layout/LayoutConnect/LayoutConnect";
+import { LayoutItem } from "./layout/LayoutConnect/LayoutItem";
+import { MoveButtonApp } from "./component/MoveButton/MoveButtonApp";
+
 function App() {
   const [on, setOn] = useState<boolean>(false);
   return (
     <>
-      <div className="flex items-center justify-evenly">
+      <LayoutHeader>
         <div className="mr-[300px]">
           <img src={logo} alt="logo" />
         </div>
@@ -38,8 +43,8 @@ function App() {
             </button>
           </AppButton>
         </div>
-      </div>
-      <div className="w-[1008px] h-[649px] border border-red-200 mx-auto my-[80px] space-y-[20px]">
+      </LayoutHeader>
+      <LayoutConnect>
         <div className="flex flex-col items-center space-y-[4px]">
           <h1 className="text-3xl font-bold">Social Task</h1>
           <p className="text-sm text-gray-500">
@@ -47,7 +52,8 @@ function App() {
           </p>
         </div>
         <ConnectAccount />
-        <div className="w-[1008px] h-[332px] border border-blue-700 flex items-center space-x-[24px] ">
+        <MoveButtonApp />
+        <LayoutItem>
           <CartItem
             imageLogo={imageLogo}
             imageIcon1={imageIcon1}
@@ -81,8 +87,8 @@ function App() {
               description: "Follow Tapos X to earn Points",
             }}
           ></CartItem>
-        </div>
-      </div>
+        </LayoutItem>
+      </LayoutConnect>
     </>
   );
 }

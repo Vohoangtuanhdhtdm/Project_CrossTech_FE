@@ -23,26 +23,3 @@ export const AppButton = ({
     </div>
   );
 };
-// fast create use rafc
-
-// **=== form ===** //
-
-// rafc - React Arrow Function Component
-
-/* 
-import React from 'react';
-
-interface Props {
-  
-}
-
-const ComponentName: React.FC<Props> = (props) => {
-  return (
-    <div>
-      
-    </div>
-  );
-}
-
-export default ComponentName;
-*/
