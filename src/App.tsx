@@ -13,11 +13,13 @@ import { LayoutHeader } from "./layout/LayoutHeader/LayoutHeader";
 import { LayoutConnect } from "./layout/LayoutConnect/LayoutConnect";
 import { LayoutItem } from "./layout/LayoutConnect/LayoutItem";
 import { MoveButtonApp } from "./component/MoveButton/MoveButtonApp";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   const [on, setOn] = useState<boolean>(false);
+
   return (
-    <>
+    <BrowserRouter>
       <LayoutHeader>
         <div className="mr-[300px]">
           <img src={logo} alt="logo" />
@@ -89,7 +91,7 @@ function App() {
           ></CartItem>
         </LayoutItem>
       </LayoutConnect>
-    </>
+    </BrowserRouter>
   );
 }
 
